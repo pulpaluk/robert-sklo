@@ -46,18 +46,22 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 18px;
-	color: #aa3e03;
+	color: #000000;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-h1 {position: relative; font-size: 28px; color: #ffffff; line-height: 32px;}
-h2 {position: relative; font-size: 20px; color: #ffffff; line-height: 24px;}
-h3 {position: relative; font-size: 16px; color: #ffffff; line-height: 20px;}
-h4 {position: relative; font-size: 12px; color: #ffffff; line-height: 16px;}
+h1 {position: relative; font-size: 28px; line-height: 32px;}
+h2 {position: relative; font-size: 22px; line-height: 26px;}
+h3 {position: relative; font-size: 18px; line-height: 22px;}
+h4 {position: relative; font-size: 12px; line-height: 16px;}
+
+h1, h2, h3, h4 {color: #ffffff; margin-top: 10px; margin-bottom: 20px; padding-bottom: 1px; font-weight: bold;}
+
+h1.decor {border-bottom: 1px solid #0101a9; color: #0101a9; text-align: center;}
 
 strong {font-weight: bold;}
 
-p {position: relative;}
+p {position: relative; text-align: left; margin: 0; padding: 2px 0 5px;}
 
 a {color: #990000; text-decoration: none;}
 a:hover {text-decoration: underline;}
@@ -72,21 +76,36 @@ a:hover {text-decoration: underline;}
 .no-padding {padding: 0;}
 
 /* GLOBAL*/
+#page {position: relative; background: url(../img/bg-page.png) no-repeat 0 0 fixed; background-size: cover; }
+
 .container-fluid {margin: 0; padding: 0;}
-.bg-menu {position: absolute; top: 55px; left: 0; height: 65px; width: 100%; background: #000078;
+.bg-menu {position: absolute; top: 83px; left: 0; height: 50px; width: 100%; background: #000078;
 background: -webkit-linear-gradient(left, transparent, #000078, #000078, #000078, transparent); /* For Safari 5.1 to 6.0 */
 background: -o-linear-gradient(left, transparent, #000078, #000078, #000078, transparent); /* For Opera 11.1 to 12.0 */
 background: -moz-linear-gradient(left, transparent, #000078, #000078, #000078, transparent); /* For Firefox 3.6 to 15 */
 background: linear-gradient(left, transparent, #000078, #000078, #000078, transparent); /* Standard syntax */}
-.bg-menu .menu {position: relative; text-align: right;z-index: 500; height: 65px;}
-.bg-menu .menu li {position: relative; display: inline-block; width: auto; color: #ffffff; text-transform: uppercase; line-height: 65px;}
-.bg-menu .menu li a {color: #ffffff; padding: 0 15px; font-size: 16px; display: inline-block; font-family: Arial, sans-serif; font-weight: bold; text-decoration: none;}
+.bg-menu .menu {position: relative; text-align: right;z-index: 500; height: 50px;}
+.bg-menu .menu li {position: relative; display: inline-block; width: auto; color: #ffffff; text-transform: uppercase; line-height: 50px; padding: 0 15px;}
+.bg-menu .menu li a {color: #ffffff; padding: 3px; font-size: 16px; line-height: 25px; display: inline-block; font-family: Arial, sans-serif; font-weight: bold; text-decoration: none; border: 2px solid transparent;}
 .bg-menu .menu li:hover a,
-.bg-menu .menu li a:hover {color: #f2dc00;}
-h1.logo {position: relative; display: inline-block; float: left;}
+.bg-menu .menu li a:hover,
+.bg-menu .menu li a.active {color: #f2dc00; border: 2px solid #f2dc00; -webkit-border-radius: 8px; border-radius: 8px;}
+h1.logo {position: relative; display: inline-block; float: left; z-index: 1000; margin: 0; padding: 0;}
 h1.logo a {position: relative; display: block; width: 179px; height: 175px;}
-h1.logo a span {position: absolute; text-indent: 10000px;}
-.container {position: relative; width: 980px; margin: 0 auto; }
+h1.logo a span {position: absolute; top: 70px; left: 30px; font-size: 12px;}
+h1.logo a img {position: relative;}
+.container {position: relative; max-width: 980px; margin: 0 auto; }
+
+
+
+/* společnost */
+.bg-pattern {
+    background: transparent url(../img/bg-point.png) repeat top left;
+    color: #ffffff;
+}
+
+/* produkce */
+.sp-buttons {display: none;}
 
 /*
 .bg-header {
